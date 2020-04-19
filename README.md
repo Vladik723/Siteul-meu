@@ -1,102 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Marcu Vlad</title>
     <style>
-        body{
-    height: 100vh; 
-    background-color:#F5DEB3;
-}
 *{
-    margin: 0;
-    padding: 0;
-    font-family: "Courier New",sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
 }
-.team-section{
-    height: 100vh;
-    display: flex;
+
+body{
+  background: #353b48;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.s{
-    flex: 1;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    transition: .6s;
+
+.btn{
+  width: 500px;
+  height: 90px;
+  background: none;
+  border: 4px solid;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 55px;
+  position: relative;
+
 }
-.s:hover{
-    flex: 3;
+
+.btn::before,.btn::after{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background: #353b48;
+  transform: skewX(50deg);
+  transition: .4s linear;
 }
-.s-pic{
-    position: absolute;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    filter: grayscale(70%);
-    transition: .3s;
+
+.btn::before{
+  top: -4px;
+  left: 10%;
 }
-.s:hover .s-pic{
-    filter: grayscale(0);
+
+.btn::after{
+  bottom: -4px;
+  right: 10%;
 }
-.s-info{
-    position: absolute;
-    bottom: 10px;
-    text-align: center;
-    width: 100%;
-    opacity: 0;
-    transition: .2s;
+
+.btn:hover::before{
+  left: 80%;
 }
-.s:hover .s-info{
-    opacity: 1;
-    bottom: 60px;
-    transition-delay: .3s;
-}
-.s-info h2{
-    font-size: 50px;
-    color: #008080;
-}
-.s-info p{
-    color: #008080;
-    font-style: arial;
-    margin-top: 8px;
-    margin-bottom: 20px;
-    font-size: 20px;
+
+.btn:hover::after{
+  right: 80%;
 }
     </style>
-</head>
-<body>
-    <div class="team-section">
-        <div class="s">
-            <img src="images/1.jpg" alt="" class="s-pic" width="600px">
-            <div class="s-info">
-                <h2>Punguta cu doi bani</h2>
-                <p>Punguta cu doi bani este un spectacol</p>
-                <div class="socialmedia"></div>
-            </div>
-        </div>
-
-        <div class="s">
-            <img src="images/2.jpg" alt="" class="s-pic">
-            <div class="s-info">
-                <h2>Danila prepeleag</h2>
-                <p>Danila prepeleag este un spectacol care<br> 
-                    veti descoperi lumea dracilor, o lume<br>
-                    misterioasaplina de haz si umor si smecherii</p>
-                <div class="socialmedia"></div>
-            </div>
-        </div>
-
-        <div class="s">
-            <img src="images/3.jpg" alt="" class="s-pic" width="600px">
-            <div class="s-info">
-                <h2>Revizorul</h2>
-                <p>COMING SOON</p>
-                <div class="socialmedia"></div>
-            </div>
-        </div>        
-    </div>
-</body>
+  </head>
+  <body>
+    <button class="btn">Vlad Marcu</button>
+  </body>
 </html>
